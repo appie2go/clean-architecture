@@ -19,5 +19,6 @@ namespace Dispatching.Core
         }
         
         public static Dollar operator *(Dollar price, decimal multiplier) => Create(price._amount * multiplier);
+        public static Dollar operator +(Dollar a, Dollar b) => Create(a._amount + b._amount);
     }
 }
