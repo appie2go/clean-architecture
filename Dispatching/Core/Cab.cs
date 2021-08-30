@@ -10,7 +10,7 @@ namespace Dispatching.Core
         private readonly int _cabSize;
         private readonly List<Passenger> _passengers = new ();
 
-        public Mile Milage;
+        public Mile Mileage;
 
         public Location Location { get; private set; }
 
@@ -39,7 +39,7 @@ namespace Dispatching.Core
         {
             var receipt = Receipt.Create(distance, Location, newLocation); 
             
-            Milage += distance;
+            Mileage += distance;
             Location = newLocation;
             
             return receipt;

@@ -19,10 +19,11 @@ namespace Dispatching.Core.Maintenance
 
         public async Task SellDeprecatedCabs()
         {
+            var maximumMileage = Mile.Create(300000);
             var cabs = await _cabRepository.GetAll();
 
             var money = Dollar.Create(0);
-            foreach (var deprecatedCab in cabs.Where(x => x.Milage > Mile.Create(300000)))
+            foreach (var deprecatedCab in cabs.Where(x => x.Mileage > maximumMileage))
             {
                 money += await _junkyardService.Sell(deprecatedCab);
             }
