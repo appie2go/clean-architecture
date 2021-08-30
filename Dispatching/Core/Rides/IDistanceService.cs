@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Dispatching.Core.Rides.Vacation
+namespace Dispatching.Core.Rides
 {
     public interface IDistanceService
     {

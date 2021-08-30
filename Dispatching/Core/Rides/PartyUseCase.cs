@@ -1,9 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Dispatching.Core.Rides.Vacation;
 
-namespace Dispatching.Core.Rides.Groups
+namespace Dispatching.Core.Rides
 {
     public class PartyUseCase
     {
