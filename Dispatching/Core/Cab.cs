@@ -1,19 +1,22 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Dispatching.Core.Rides;
 
 namespace Dispatching.Core
 {
     public class Cab
     {
         private readonly int _cabSize;
-        private readonly List<Passenger> _passengerses = new ();
+        private readonly List<Passenger> _passengers = new ();
+
+        public Mile Milage;
 
         public Location Location { get; private set; }
 
-        public IReadOnlyList<Passenger> Passengers => _passengerses;
+        public IReadOnlyList<Passenger> Passengers => _passengers.AsReadOnly();
 
-        public bool Taken => _passengerses.Any();
+        public bool Taken => _passengers.Any();
 
         public Cab(Location location, int cabSize)
         {
@@ -24,16 +27,24 @@ namespace Dispatching.Core
         public void Embark(Passenger passenger)
         {
             const int cabDrivers = 1;
-            _passengerses.Add(passenger);
+            _passengers.Add(passenger);
 
-            if (_passengerses.Count + cabDrivers > _cabSize)
+            if (_passengers.Count + cabDrivers > _cabSize)
             {
                 throw new NotSupportedException("Too many passengers.");
             }
         }
 
-        public void SetLocation(Location newLocation) => Location = newLocation;
-        
-        public void Disembark() => _passengerses.Clear();
+        public Receipt Drive(Mile distance, Location newLocation)
+        {
+            var receipt = Receipt.Create(distance, Location, newLocation); 
+            
+            Milage += distance;
+            Location = newLocation;
+            
+            return receipt;
+        }
+
+        public void Disembark() => _passengers.Clear();
     }
 }

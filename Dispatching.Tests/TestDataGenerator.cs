@@ -1,5 +1,6 @@
 using AutoFixture;
 using Dispatching.Core;
+using Dispatching.Core.Rides;
 
 namespace Dispatching.Tests
 {

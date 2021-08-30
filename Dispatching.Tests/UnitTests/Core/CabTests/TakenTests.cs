@@ -1,4 +1,5 @@
 using Dispatching.Core;
+using Dispatching.Core.Rides;
 using FluentAssertions;
 using Xunit;
 using static Dispatching.Tests.TestDataGenerator;
