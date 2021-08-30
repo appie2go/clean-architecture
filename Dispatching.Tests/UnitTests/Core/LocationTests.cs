@@ -1,9 +1,10 @@
 using System;
+using Dispatching.Core;
 using FluentAssertions;
 using Xunit;
-using static Dispatching.Tests.TestFixtures;
+using static Dispatching.Tests.TestDataGenerator;
 
-namespace Dispatching.Tests.UnitTests
+namespace Dispatching.Tests.UnitTests.Core
 {
     public class LocationTests
     {

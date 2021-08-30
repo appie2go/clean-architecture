@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dispatching
+namespace Dispatching.Core
 {
     public readonly struct Location
     {

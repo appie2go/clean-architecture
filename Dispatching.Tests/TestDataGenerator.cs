@@ -1,8 +1,9 @@
 using AutoFixture;
+using Dispatching.Core;
 
 namespace Dispatching.Tests
 {
-    public static class TestFixtures
+    public static class TestDataGenerator
     {
         public static T Any<T>()
         {

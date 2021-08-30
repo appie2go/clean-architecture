@@ -1,4 +1,4 @@
-namespace Dispatching
+namespace Dispatching.Core
 {
     public class Passenger
     {
