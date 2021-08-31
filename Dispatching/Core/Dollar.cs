@@ -6,6 +6,8 @@ namespace Dispatching.Core
     {
         private readonly decimal _amount;
 
+        public static Dollar None => Create(0);
+        
         public static Dollar Create(decimal amount) => new (amount);
 
         private Dollar(decimal amount)
