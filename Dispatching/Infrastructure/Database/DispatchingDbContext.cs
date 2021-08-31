@@ -6,10 +6,7 @@ namespace Dispatching.Infrastructure.Database
 {
     public class DispatchingDbContext : DbContext
     {
-        public DispatchingDbContext(DbContextOptions options) : base(options)
-        {
-            
-        }
+        public DispatchingDbContext(DbContextOptions options) : base(options) { }
         
         public DbSet<Cab> Cabs { get; set; }
 
@@ -25,6 +22,4 @@ namespace Dispatching.Infrastructure.Database
                 });
         }
     }
-
-
 }

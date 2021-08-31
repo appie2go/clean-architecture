@@ -4,7 +4,7 @@ using Dispatching.Core.Maintenance;
 
 namespace Dispatching.Infrastructure.JunkyardAndCo
 {
-    public class Junkyard : IJunkyardService
+    public class JunkyardService : IJunkyardService
     {
         public Task<Dollar> Sell(Cab cab)
         {

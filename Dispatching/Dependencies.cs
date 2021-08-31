@@ -21,7 +21,7 @@ namespace Dispatching
                 .AddTransient<VacationUseCase>()
                 .AddTransient<DeprecationUseCase>()
                 .AddTransient<ICabRepository, CabRepository>()
-                .AddTransient<IJunkyardService, Junkyard>()
+                .AddTransient<IJunkyardService, JunkyardService>()
                 .AddTransient<IMoneyService, WesternUnionService>()
                 .AddTransient<IDistanceService, GoogleMapsService>()
                 .AddTransient<ILocationService, GoogleMapsService>();
