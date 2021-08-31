@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dispatching", "Dispatching\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dispatching.Tests", "Dispatching.Tests\Dispatching.Tests.csproj", "{50CCD1C5-4B99-407E-8706-AE530D44D912}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dispatching.Web", "Dispatching.Web\Dispatching.Web.csproj", "{0DDC4657-5D47-4B48-A56B-3696C21A7AAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FAE35C15-6F4C-4364-86E0-F0E5C646A28C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,12 @@ Global
 		{50CCD1C5-4B99-407E-8706-AE530D44D912}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50CCD1C5-4B99-407E-8706-AE530D44D912}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50CCD1C5-4B99-407E-8706-AE530D44D912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DDC4657-5D47-4B48-A56B-3696C21A7AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DDC4657-5D47-4B48-A56B-3696C21A7AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DDC4657-5D47-4B48-A56B-3696C21A7AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DDC4657-5D47-4B48-A56B-3696C21A7AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{50CCD1C5-4B99-407E-8706-AE530D44D912} = {FAE35C15-6F4C-4364-86E0-F0E5C646A28C}
 	EndGlobalSection
 EndGlobal
