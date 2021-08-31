@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace Dispatching.Core.Rides
 {
@@ -7,9 +8,17 @@ namespace Dispatching.Core.Rides
         public decimal Longitude { get; }
         public decimal Latitude { get; }
 
-        public static Location Create(decimal longitude, decimal latitude)
+        public static Location Create(decimal longitude, decimal latitude) => new(longitude, latitude);
+
+        public static Location Parse(string serializedLocation)
         {
-            return new(longitude, latitude);
+            var decimals = JsonConvert.DeserializeObject<decimal[]>(serializedLocation);
+            if (decimals.Length != 2)
+            {
+                throw new FormatException($"{serializedLocation} is not a valid location");
+            }
+
+            return new(decimals[0], decimals[1]);
         }
         
         private Location(decimal longitude, decimal latitude)
@@ -27,5 +36,7 @@ namespace Dispatching.Core.Rides
             Longitude = longitude;
             Latitude = latitude;
         }
+
+        public override string ToString() => JsonConvert.SerializeObject(new[] { Longitude, Latitude });
     }
 }

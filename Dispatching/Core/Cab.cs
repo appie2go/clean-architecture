@@ -6,11 +6,12 @@ using Dispatching.Core.Rides;
 namespace Dispatching.Core
 {
     public class Cab
-    {
+    {   
+        private readonly Guid _id = Guid.NewGuid();
         private readonly int _cabSize;
         private readonly List<Passenger> _passengers = new ();
 
-        public Mile Mileage;
+        public Mile Mileage { get; private set; }
 
         public Location Location { get; private set; }
 

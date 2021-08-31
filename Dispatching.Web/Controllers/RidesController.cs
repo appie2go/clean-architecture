@@ -8,13 +8,16 @@ namespace Dispatching.Web.Controllers
     {
         [HttpPost]
         [Route("rides/airport")]
-        public async Task<IActionResult> CreateRide([FromServices] VacationUseCase useCase, Location request)
+        public async Task<IActionResult> CreateRide([FromServices] VacationUseCase useCase, Models.Location request)
         {
-            var passenger = Passenger.Create(request.Longitude, request.Latitude);
+            var passenger = Passenger.Create(request.Long, request.Lat);
             var receipt = await useCase.DrivePassengerToAirport(passenger);
-            var response = Location.Create(receipt.Destination.Longitude, receipt.Destination.Latitude);
             
-            return Ok(response);
+            return Ok(new Models.Location
+            {
+                Long = receipt.Destination.Longitude,
+                Lat = receipt.Destination.Latitude
+            });
         }
     }
 }
