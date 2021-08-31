@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Dispatching.Core;
 using Microsoft.EntityFrameworkCore;
 
-namespace Dispatching.Infrastructure.Database
+namespace Dispatching.Infrastructure.SqlServer
 {
     public class CabRepository : ICabRepository
     {

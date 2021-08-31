@@ -2,7 +2,7 @@ using Dispatching.Core;
 using Dispatching.Core.Rides;
 using Microsoft.EntityFrameworkCore;
 
-namespace Dispatching.Infrastructure.Database
+namespace Dispatching.Infrastructure.SqlServer
 {
     public class DispatchingDbContext : DbContext
     {
