@@ -1,4 +1,4 @@
-# Clean-architecture
+# Clean-architecture example
 
 In 2017 Uncle Bob wrote a great book about clean architecture. It explains the principles of a good software architecture. The book contains lots of information about the SOLID principles, about boundaries in the application, about screaming architecture, and so forth.
 What’s great about the book, is that it isn’t dogmatic. It doesn’t have code samples explaining how to implement a use case or a controller. However, at some point you need to start coding. This leads to the question: What could a clean architecture look like.
